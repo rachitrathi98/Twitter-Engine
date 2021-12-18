@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+  display:grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+}
+
+.container{
+  background: #fff;
+  /* max-width: 350px; */
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15)
+}
+
+.container form .title{
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+
+.container form .title:before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  bottom: 3px;
+  left: 0;
+  border-radius: 5px;
+  background:linear-gradient(to right, #000000 0%, #403d3e 100%)
+}
+
+.container form .input-box{
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.container form .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+
+.container form .underline:before{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+
+.container form .underline:after{
+  position:absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background:linear-gradient(to right, #000000 0%, #403d3e 100%);
+  transform: scaleX(0); 
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+.container form .input-box input:focus ~ .underline:after,
+.container form .input-box input:valid ~ .underline:after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.container form .button{
+  margin: 40px 0 20px 0;
+  
+}
+
+.container form .input-box input[type="submit"]{
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background:linear-gradient(to right, #000000 0%, #403d3e 100%);
+  transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover{
+  letter-spacing: 1px;
+  background:linear-gradient(to left, #000000 0%, #403d3e 100%)
+}
+
+.container .option{
+  font-size: 14px;
+  text-align: center;
+}
+
+.container .twitter a,
+.container .facebook a{
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 20px;
+  color: #fff;
+  line-height: 45px;
+  border-radius: 5px;
+}
+
+.container .twitter i,
+.container .facebook i{
+  padding-right: 12px;
+  font-size: 20px;
+}
+
+.container .twitter a{
+  margin: 20px 0 15px 0;
+  background:linear-gradient(to left, #00acee 0%, #1abeff 100%);
+}
+
+.container .twitter a:hover{
+  background:linear-gradient(to right, #00acee 0%, #1abeff 100%);
+}
+
+.container .facebook a{
+  margin: 20px 0 50px 0;
+  background:linear-gradient(to left, #3b5998 0%, #476bb8 100%);
+}
+
+.container .facebook a:hover{
+  background:linear-gradient(to right, #3b5998 0%, #476bb8 100%);
+}
+
+.container .custom-container{
+  height: 400rem;
+  width: 600rem;
+  border: none;
+}
+
+carousel {
+  display: block;
+}
+ carousel page {
+   position: absolute;
+	 transition: transform 0.5s;
+	 transform: scale(0);
+}
+ carousel page {
+   display: block;
+	 
+}
+ carousel #page1cb:checked ~ #page1 {
+	 transform: scale(1);
+}
+ carousel #page2cb:checked ~ #page2 {
+	 transform: scale(1);
+}
+ carousel #page3cb:checked ~ #page3 {
+	 transform: scale(1);
+}
+ carousel #page4cb:checked ~ #page4 {
+	 transform: scale(1);
+}
+ carousel #page5cb:checked ~ #page5 {
+	 transform: scale(1);
+}
+carousel #page6cb:checked ~ #page6 {
+	 transform: scale(1);
+}
+carousel #page7cb:checked ~ #page7 {
+	 transform: scale(1);
+}
+carousel #page8cb:checked ~ #page8 {
+	 transform: scale(1);
+}
+
+
+  </style>
+</head>
+
+  <body>
+
+    <carousel>
+      <input type="radio" id="page1cb" checked name="pages" />
+      <input type="radio" id="page2cb" name="pages" />
+      <input type="radio" id="page3cb" name="pages" />
+      <input type="radio" id="page4cb" name="pages" />
+      <input type="radio" id="page5cb" name="pages" />
+      <input type="radio" id="page6cb" name="pages" />
+      <input type="radio" id="page7cb" name="pages" />
+      <input type="radio" id="page8cb" name="pages" />
+    
+
+<page id="page1">
+<div class="container">
+    
+    <form action="" id="registration">
+      <div class="title">Register User</div>
+      <div class="input-box">
+        <label for="fname">First name:</label>
+        <input type="text" placeholder="Enter your First Name" id="fname" name="fname">
+      </div>
+       
+      <div class="input-box">
+        <label for="lname">Last name:</label>
+        <input type="text" placeholder="Enter your Last Name" id="lname" name="lname">
+      </div>
+       
+      <div class="input-box">
+        <label for="username">User ID:</label><br>
+        <input type="text" id="username" placeholder="Enter User ID" name="username">
+        
+      </div>
+        
+      <div class="input-box">
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" placeholder="Enter password" name="password">
+      </div>
+      <div class="input-box button">
+        <input type="submit"></button>
+      </div>
+
+      
+    </form>
+</div>
+</page>
+
+
+<page id="page2">
+<div class="container">
+  
+  
+  <form id="login">
+    <div class="title">Login</div>
+    <div class="input-box">
+      <label for="username">UserID:</label>
+      <input type="text" id="username" placeholder="Enter Username" name="username">
+    </div>
+   <div class="input-box">
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" placeholder="Enter Password" name="password">
+   </div>
+   
+  <div class="input-box button">
+    <input type="submit"></button>
+  </div>
+  
+  </form>
+</div>
+
+</page>
+
+
+<page id="page3">
+<div class="container">
+  
+
+  <form id="follow">
+    <div class="title">Follow User</div>
+    <div class="input-box">
+      <label for="username">UserID</label><br>
+      <input type="text" id="username" placeholder="Enter User Id" name="username"><br>
+    </div>
+     
+  <div class="input-box button">
+    <input type="submit"></button>
+  </div>
+
+  </form>
+</div>
+</page>
+
+<page id="page4">
+<div class="container">
+  
+
+  <form id="tweet">
+    <div class="title">Tweet</div>
+    <div class="input-box">
+      <label for="tweetField">Tweet Box</label><br>
+      <input type="text" placeholder="Write your Tweet..." id="tweetField" name="tweetField"><br>
+    </div>
+
+    <div class="input-box button">
+      <input type="submit"></button>
+    </div>
+     
+      
+  </form>
+</div>
+</page>
+
+<page id="page5">
+
+<div class="container">
+  
+
+  <form id="retweet">
+    <div class="title">Retweet</div>
+    <div class="input-box">
+      <label for="retweet">Retweet Box</label><br>
+      <input type="text" id="retweet" placeholder="Enter Tweet ID" name="retweet"><br>
+    </div>
+
+    <div class="input-box button">
+      <input type="submit"></button>
+    </div>
+  </form>
+</div>
+</page>
+
+<page id="page6">
+
+<div class="container">
+  
+
+  <form id="searchUser">
+    <div class="title">Search User ID</div>
+    <div class="input-box">
+      <label for="usernameSearch">User ID</label><br>
+      <input type="text" id="usernameSearch" placeholder="Enter User Id" name="usernameSearch"><br>
+    </div>
+     
+
+      <div class="input-box button">
+        <input type="submit"></button>
+      </div>
+
+     
+  </form>
+</div>
+
+</page>
+
+<page id="page7">
+<div class="container">
+
+  <form id="hashtagTweet">
+      <div class="title">Search Hashtag</div>
+      <div class="input-box">
+        <label for="hashtagTweet">Hashtag</label><br>
+        <input type="text" id="hashtagTweet" placeholder="Enter Hashtag to search..." name="hashtagTweet"><br>
+      </div>
+      
+
+      <div class="input-box button">
+        <input type="submit"></button>
+      </div>
+
+     
+  </form>
+</div>
+</page>
+
+<page id="page8">
+  <div class="container">
+  
+    <div class="twitter" id="wallfeed" onclick="handleWallFeed()">
+      <a href="#"><i class="fab fa-twitter"></i>Show My Tweets</a>
+    </div>
+  
+    <div class="facebook" id="logout" onclick="handleLogout()">
+      <a href="#"><i class="fab fa-facebook-f"></i>Logout</a>
+    </div>
+  
+    <h2>Connection Status</h2>
+    <div id="output"></div>
+  </div>
+</page>
+<div class="container">
+
+ <div class="custom-container"></div>
+</div>
+    </carousel>
+
+
+
+
+<script>
+  let formRegistration = document.getElementById("registration");
+
+    formRegistration.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendData("register", formRegistration);
+    });
+
+    let formLogin = document.getElementById("login");
+
+    formLogin.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendData("login", formLogin);
+    });
+
+    let formSearchUser = document.getElementById("searchUser");
+
+    formSearchUser.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendData("searchUser", formSearchUser);
+    });
+
+    let formHashtagTweets = document.getElementById("hashtagTweet");
+
+    formHashtagTweets.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendData("hashtagTweet", formHashtagTweets);
+    });
+
+    let formFollow = document.getElementById("follow");
+
+    formFollow.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendDataN("follow", formFollow, formLogin);
+    });
+
+    let tweetField = document.getElementById("tweet");
+
+    tweetField.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendDataN("tweet", tweetField, formLogin);
+    });
+
+    let retweetField = document.getElementById("retweet");
+
+    retweetField.addEventListener("submit", (event) => {
+      event.preventDefault();
+      sendData("retweet", retweetField);
+    });
+
+    function handleWallFeed() {
+      sendDataN("ShowWallfeed", formFollow, formLogin);
+    }
+    function handleLogout() {
+      writeToScreen("button pressed");
+      sendData("Logout", formLogin);
+    }
+
+    var wsUri = "ws://localhost:8080/websocket";
+    var output;
+
+    function init() {
+      output = document.getElementById("output");
+      testWebSocket();
+    }
+
+    function testWebSocket() {
+      websocket = new WebSocket(wsUri);
+      websocket.onopen = function (evt) {
+        onOpen(evt);
+      };
+      websocket.onmessage = function (evt) {
+        onMessage(evt);
+      };
+    }
+
+    function onOpen(evt) {
+      writeToScreen("User Connected");
+    }
+
+    function onMessage(evt) {
+      writeToScreen(
+        '<span style="color: green;">Response: ' + evt.data + "</span>"
+      );
+    }
+
+    function sendData(type, details) {
+      var operation = type;
+      var fname = "";
+      var lname = "";
+      var username = "";
+      var password = "";
+      var usernameSearch = "";
+      var hashtagTweet = "";
+      var retweet = "";
+      var tweetField = "";
+      var usernameFollow = "";
+
+      if (operation == "register" || operation == "login") {
+        username = details.elements["username"].value;
+        password = details.elements["password"].value;
+      }
+
+      if (operation == "register") {
+        fname = details.elements["fname"].value;
+        lname = details.elements["lname"].value;
+      }
+
+      if (operation == "searchUser") {
+        usernameSearch = details.elements["usernameSearch"].value;
+      }
+
+      if (operation == "hashtagTweet") {
+        hashtagTweet = details.elements["hashtagTweet"].value;
+      }
+
+      if (operation == "retweet") {
+        retweet = details.elements["retweet"].value;
+      }
+
+      var jsonAPI = {
+        Operation: operation,
+        Content: {
+          fname: fname,
+          lname: lname,
+          username: username,
+          password: password,
+          usernameSearch: usernameSearch,
+          hashtagTweet: hashtagTweet,
+          retweet: retweet,
+          tweetField: tweetField,
+          usernameFollow: usernameFollow,
+        },
+      };
+
+      websocket.send(JSON.stringify(jsonAPI));
+    }
+
+    function sendDataN(type, det, details) {
+      var operation = type;
+      var fname = "";
+      var lname = "";
+      var username = "";
+      var password = "";
+      var usernameSearch = "";
+      var hashtagTweet = "";
+      var retweet = "";
+      var tweetField = "";
+      var usernameFollow = "";
+
+      if (operation == "follow") {
+        usernameFollow = det.elements["username"].value;
+        username = details.elements["username"].value;
+      }
+
+      if (operation == "tweet") {
+        tweetField = det.elements["tweetField"].value;
+        username = details.elements["username"].value;
+      }
+
+      if (operation == "ShowWallfeed") {
+        username = det.elements["username"].value;
+      }
+
+      var jsonAPI = {
+        Operation: operation,
+        Content: {
+          fname: fname,
+          lname: lname,
+          username: username,
+          password: password,
+          usernameSearch: usernameSearch,
+          hashtagTweet: hashtagTweet,
+          retweet: retweet,
+          tweetField: tweetField,
+          usernameFollow: usernameFollow,
+        },
+      };
+      websocket.send(JSON.stringify(jsonAPI));
+    }
+    function writeToScreen(message) {
+      var pre = document.createElement("p");
+      pre.style.wordWrap = "break-word";
+      pre.innerHTML = message;
+      output.appendChild(pre);
+    }
+
+    window.addEventListener("load", init, false);
+
+</script>
+
+</body>
